@@ -8,9 +8,9 @@ export default class TabBarIcon extends Component {
     return (
       <Icon.Foundation
         name={this.props.name}
-        size={26}
-        style={{marginBottom: -4,}}
-        color={this.props.focused ? Colors.tabIconSelected : Colors.tabIconDefault}
+        size={ this.props.isPremier ? 34 : 26 }
+        style={{marginBottom: (this.props.isPremier ? 0 : -4 )}}
+        color={ this.props.isPremier ? '#ffcb43' : (this.props.focused ? Colors.tabIconSelected : Colors.tabIconDefault) }
       />
     );
   }

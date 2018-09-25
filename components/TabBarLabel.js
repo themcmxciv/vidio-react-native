@@ -7,7 +7,7 @@ export default class TabBarIcon extends Component {
   render() {
     return (
       <Text
-        style={[styles.tabBarLabel, this.props.focused ? styles.tabBarLabelActive : {}]}
+        style={[styles.tabBarLabel, this.props.focused ? ( this.props.isPremier ? styles.tabBarLabelActivePremier : styles.tabBarLabelActive) : {}]}
       > {this.props.title} </Text>
     );
   }
@@ -22,5 +22,8 @@ const styles = StyleSheet.create({
   },
   tabBarLabelActive: {
     color: Colors.tintColor
+  },
+  tabBarLabelActivePremier: {
+    color: '#ffcb43'
   }
 });

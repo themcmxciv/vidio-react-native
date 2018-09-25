@@ -6,6 +6,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import TabBarLabel from '../components/TabBarLabel';
 import HomeScreen from '../screens/HomeScreen';
 import ExploreScreen from '../screens/ExploreScreen';
+import PremierScreen from '../screens/PremierScreen';
 import FollowingScreen from '../screens/FollowingScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 
@@ -14,7 +15,6 @@ const HomeStack = createStackNavigator({
 })
 
 HomeStack.navigationOptions = {
-  title: 'Home',
   tabBarLabel: ({focused}) => (
     <TabBarLabel
       title='Home'
@@ -34,7 +34,6 @@ const ExploreStack = createStackNavigator({
 })
 
 ExploreStack.navigationOptions = {
-  title: 'Explore',
   tabBarLabel: ({focused}) => (
     <TabBarLabel
       title='Explore'
@@ -49,12 +48,32 @@ ExploreStack.navigationOptions = {
   )
 }
 
+const PremierStack = createStackNavigator({
+  Premier: PremierScreen
+})
+
+PremierStack.navigationOptions = {
+  tabBarLabel: ({focused}) => (
+    <TabBarLabel
+      title='Premier'
+      focused={focused}
+      isPremier={true}
+    />
+  ),
+  tabBarIcon: ({focused}) => (
+    <TabBarIcon
+      focused={focused}
+      isPremier={true}
+      name='crown'
+    />
+  )
+}
+
 const FollowingStack = createStackNavigator({
   Following: FollowingScreen
 })
 
 FollowingStack.navigationOptions = {
-  headerTitle: 'Following',
   tabBarLabel: ({focused}) => (
     <TabBarLabel
       title='Following'
@@ -74,7 +93,6 @@ const ProfileStack = createStackNavigator({
 })
 
 ProfileStack.navigationOptions = {
-  title: 'Profile',
   tabBarLabel: ({focused}) => (
     <TabBarLabel
       title='Profile'
@@ -100,6 +118,7 @@ const tabBarOptions = {
 export default createBottomTabNavigator({
   HomeStack,
   ExploreStack,
+  PremierStack,
   FollowingStack,
   ProfileStack,
 }, tabBarOptions)
