@@ -9,7 +9,7 @@ export default class FollowingScreen extends Component {
   }
 
   static navigationOptions = {
-    title: 'Following',
+    header: null
   };
 
   render() {

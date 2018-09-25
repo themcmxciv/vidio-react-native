@@ -9,7 +9,7 @@ export default class ProfileScreen extends Component {
   }
 
   static navigationOptions = {
-    title: 'Profile',
+    header: null
   };
 
   render() {

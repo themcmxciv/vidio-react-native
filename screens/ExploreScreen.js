@@ -9,7 +9,7 @@ export default class ExploreScreen extends Component {
   }
 
   static navigationOptions = {
-    title: 'Explore',
+    header: null
   };
 
   render() {
