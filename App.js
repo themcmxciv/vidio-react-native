@@ -12,7 +12,7 @@ export default class App extends React.Component {
   _loadResourcesAsync = () => {
     return Promise.all([
       Font.loadAsync({
-        ...Icon.Ionicons.font
+        ...Icon.Foundation.font
       })
     ]);
   }

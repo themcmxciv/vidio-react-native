@@ -24,11 +24,7 @@ HomeStack.navigationOptions = {
   tabBarIcon: ({focused}) => (
     <TabBarIcon
       focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-home${focused ? '' : '-outline'}`
-          : 'md-home'
-      }
+      name='home'
     />
   )
 }
@@ -48,11 +44,7 @@ ExploreStack.navigationOptions = {
   tabBarIcon: ({focused}) => (
     <TabBarIcon
       focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-search${focused ? '' : '-outline'}`
-          : 'md-search'
-      }
+      name='magnifying-glass'
     />
   )
 }
@@ -72,11 +64,7 @@ FollowingStack.navigationOptions = {
   tabBarIcon: ({focused}) => (
     <TabBarIcon
       focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-play${focused ? '' : '-outline'}`
-          : 'md-play'
-      }
+      name='play-video'
     />
   )
 }
@@ -96,13 +84,17 @@ ProfileStack.navigationOptions = {
   tabBarIcon: ({focused}) => (
     <TabBarIcon
       focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-contact${focused ? '' : '-outline'}`
-          : 'md-contact'
-      }
+      name='torso'
     />
   )
+}
+
+const tabBarOptions = {
+  tabBarOptions: {
+    tabStyle: {
+      height: 48,
+    }
+  }
 }
 
 export default createBottomTabNavigator({
@@ -110,4 +102,4 @@ export default createBottomTabNavigator({
   ExploreStack,
   FollowingStack,
   ProfileStack,
-})
+}, tabBarOptions)

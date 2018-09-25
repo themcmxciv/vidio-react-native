@@ -15,10 +15,10 @@ export default class TabBarIcon extends Component {
 
 const styles = StyleSheet.create({
   tabBarLabel: {
-    marginBottom: 6,
-    fontSize: 10,
+    fontSize: 12,
     textAlign: 'center',
-    color: '#111'
+    color: '#111',
+    marginBottom: 3,
   },
   tabBarLabelActive: {
     color: Colors.tintColor

@@ -6,10 +6,10 @@ import Colors from '../constants/Colors';
 export default class TabBarIcon extends Component {
   render() {
     return (
-      <Icon.Ionicons
+      <Icon.Foundation
         name={this.props.name}
         size={26}
-        style={{marginTop: 6}}
+        style={{marginBottom: -4,}}
         color={this.props.focused ? Colors.tabIconSelected : Colors.tabIconDefault}
       />
     );
